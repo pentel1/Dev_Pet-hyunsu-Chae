@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="room">방 이름</string>
+    <string name="timeday">월</string>
+
+
+
+    <string name="space">\t</string>
+    <string name="sunday">일</string>
+    <string name="monday">월</string>
+    <string name="tuesday">화</string>
+    <string name="wednesday">수</string>
+    <string name="thursday">목</string>
+    <string name="friday">금</string>
+    <string name="saturday">토</string>
+
+    <string name="time_9">\n9\n</string>
+    <string name="time_10">\n10\n</string>
+    <string name="time_11">\n11\n</string>
+    <string name="time_12">\n12\n</string>
+    <string name="time_13">\n1\n</string>
+    <string name="time_14">\n2\n</string>
+    <string name="time_15">\n3\n</string>ㄴ
+    <string name="time_16">\n4\n</string>
+    <string name="time_17">\n5\n</string>
+    <string name="time_18">\n6\n</string>
+    <string name="time_19">\n7\n</string>
+    <string name="time_20">\n8\n</string>
+
+    <string name="send">보내기</string>
+    <string name="increase">^</string>
+
+    <string name="first_message">최근 채팅 내역</string>
+
+
+
+    <string name="make_room">방 이름을 입력해주세요</string>
+    <string name="make">생성하기</string>
+
+
+</resources>

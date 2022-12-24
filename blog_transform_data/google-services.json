@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "239838989231",
+    "project_id": "dev-camp-blog-transform",
+    "storage_bucket": "dev-camp-blog-transform.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239838989231:android:578e04ac617f2f49213d5a",
+        "android_client_info": {
+          "package_name": "com.example.blog_transform_data"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239838989231-0gmm6da82qf3k9aipbdqgaujrp43ragl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp79DRsjS24ijr6QXRl4cpI8YNwyqv5vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239838989231-0gmm6da82qf3k9aipbdqgaujrp43ragl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

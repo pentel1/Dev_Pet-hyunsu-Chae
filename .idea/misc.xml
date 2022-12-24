@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/winterdevcamp_blog_transform/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/ic_launcher_background.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/make_time.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/make_time_end.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/make_time_end_notouch.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/make_time_notouch.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/make_time_start.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/make_time_start_notouch.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/room_border.xml" value="0.1755" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/round.xml" value="0.3625" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/round_chat.xml" value="0.367" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/round_day.xml" value="0.3625" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/round_room.xml" value="0.367" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/round_room_item.xml" value="0.1755" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/drawable/round_time.xml" value="0.3625" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_main_toolbar.xml" value="0.245018115942029" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_make_calender_schedule.xml" value="0.25" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_make_fixed_schedule.xml" value="0.33" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_make_fixed_schedule_toolbar.xml" value="0.245018115942029" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_room.xml" value="0.17755825734549138" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_teamroom.xml" value="0.36614583333333334" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/activity_teamroom_toolbar.xml" value="0.3748271092669433" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/dialog_make_room.xml" value="0.39504373177842567" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/dialog_room_maker.xml" value="0.21472019464720193" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/dialog_select_schedule.xml" value="0.17806484295845998" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/fragment_schedule.xml" value="0.17806484295845998" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/make_recycler_item_schedule.xml" value="0.245018115942029" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_item_combine.xml" value="0.12314814814814815" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_item_day.xml" value="0.67" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_item_room.xml" value="0.34692028985507245" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_item_time.xml" value="0.67" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_main_item_day.xml" value="0.17806484295845998" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_main_item_room.xml" value="0.245018115942029" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_main_item_time.xml" value="0.17806484295845998" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_make_item_day.xml" value="0.5" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_make_item_schedule.xml" value="0.5" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_teamroom_item_chatlist.xml" value="0.36614583333333334" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/recycler_teamroom_item_teamlist.xml" value="0.17806484295845998" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/schedule_grid.xml" value="0.5" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/schedule_main.xml" value="0.75" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/layout/tile_item.xml" value="0.35144927536231885" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/menu/main_toolbar_menu.xml" value="0.33" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/menu/make_toolbar_menu.xml" value="0.25092592592592594" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/menu/teamroom_navigationmenu.xml" value="0.36614583333333334" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/menu/teamroom_toolbar_menu.xml" value="0.25092592592592594" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.216" />
+        <entry key="..\:/winterdevcamp_blog_transform/blog_transform_presentation/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1955" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

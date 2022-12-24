@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0"
+        android:background="@drawable/round_day"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/make_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monday"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/make_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        app:columnCount="1"
+        app:rowCount="24">
+
+        <ImageView
+            android:id="@+id/time_9_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_start_notouch" />
+
+        <ImageView
+            android:id="@+id/time_9_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_10_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_10_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_11_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_11_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_12_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_12_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_13_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_13_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_14_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_14_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_15_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_15_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_16_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_16_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_17_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_17_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_18_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_18_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_19_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_19_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_20_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_notouch" />
+
+        <ImageView
+            android:id="@+id/time_20_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:scaleType="fitXY"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/make_time_end_notouch" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
