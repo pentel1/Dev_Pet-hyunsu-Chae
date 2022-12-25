@@ -3,8 +3,6 @@ package com.example.blog_transform;
 import android.view.View;
 
 import com.example.blog_transform.schedule_fragment.TimeAdapter;
-import com.example.bolg_transform_data.Model.DataModel_example.RoomList;
-import com.example.bolg_transform_data.Model.DataModel_example.Time;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,16 +15,15 @@ public interface  Main_Contract {
         void update_Fragment();
     }
     interface Main_Presenter {
-        ArrayList<String> getRoomList_Data();
         void RoomList_Touch();
-        ArrayList<Integer> getSchedule_value();
+        void Make_Room(String roomname);
     }
 
     interface Make_Presenter
     {
         void imagechange(View v, String viewtag);
         void Drag_imagechange(View v, String viewtag);
-        void save();
+
     }
 
 
@@ -37,8 +34,7 @@ public interface  Main_Contract {
     }
     interface Fragment_Presenter
     {
-        ArrayList<Time> getTimeList_Data();
-        ArrayList<Time> getMainTime_Data();
+
         void Day_Touch();
         void Time_Touch();
         TimeAdapter Change_Adapter(int state, TimeAdapter time);

@@ -15,6 +15,8 @@ public class Make_Presenter implements Main_Contract.Make_Presenter {
 
     static List<Integer> schedule;
     Schedule_Save_UseCase usecase;
+    static int state;
+
 
     public Make_Presenter(List<Integer> schedule) {
         this.schedule = schedule;
@@ -27,7 +29,6 @@ public class Make_Presenter implements Main_Contract.Make_Presenter {
         ImageView ig = (ImageView) v;
         String value = viewtag.substring(viewtag.length()-1, viewtag.length());
         int index = Integer.parseInt(viewtag.substring(0, viewtag.length()-1));
-        Log.e("테스트 확인\t ", (index/24)+ ""+(index%24));
         if(value.equals("0")) {
             value = "1";
             ig.setTag(index+""+value);
@@ -67,7 +68,6 @@ public class Make_Presenter implements Main_Contract.Make_Presenter {
 
     @Override
     public void Drag_imagechange(View v, String viewtag) {
-        int state =  Integer.parseInt(viewtag.substring(viewtag.length()-1, viewtag.length()));
         ImageView ig = (ImageView) v;
         String value = viewtag.substring(viewtag.length()-1, viewtag.length());
         int index = Integer.parseInt(viewtag.substring(0, viewtag.length()-1));
@@ -99,20 +99,26 @@ public class Make_Presenter implements Main_Contract.Make_Presenter {
 
     }
 
-    @Override
+
     public void save()
     {
         List<String> description = new ArrayList<String>();
-
         for(int i = 0; i < 168; i++)
         {
-            schedule.add(0);
+
             description.add("초기값");
         }
         usecase = new Schedule_Save_UseCase(schedule, description, "pentel");
+        usecase.getSchedule();
+
     }
 
 
+    public int getState() {
+        return state;
+    }
 
-
+    public void setState(int state) {
+        this.state = state;
+    }
 }

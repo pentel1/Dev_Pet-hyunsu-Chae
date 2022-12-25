@@ -19,24 +19,26 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blog_transform.R;
-import com.example.bolg_transform_data.Model.DataModel_example.Make;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
 
-    private ArrayList<Make> arraylist;
+    private ArrayList<String> day;
+    private ArrayList<Integer> img;
     private Context context;
     static List<Integer> schedule;
     Make_Presenter presenter;
 
 
-    public MakeAdapter(ArrayList<Make> arrayList, List<Integer> schedule) {
-        this.arraylist = arrayList;
+    public MakeAdapter(ArrayList<String> day, ArrayList<Integer> img, List<Integer> schedule) {
+        this.day = day;
         this.schedule = schedule;
+        this.img = img;
         presenter = new Make_Presenter(schedule);
     }
+
 
     @NonNull
     @Override
@@ -54,11 +56,11 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MakeAdapter.ViewHolder holder, int position) {
 
-        holder.day.setText(arraylist.get(position).getText());
+        holder.day.setText(day.get(position));
 
         for (int i = 0; i < 24; i++) {
             holder.image[i].setTag(((position*24)+i)+"0");
-            holder.image[i].setImageResource(arraylist.get(position).getImage()[i]);
+            holder.image[i].setImageResource(img.get(i));
             holder.image[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -83,7 +85,10 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
 
 
                     presenter.imagechange(view, view.getTag()+"");
+                    String viewtag = view.getTag()+"";
 
+                    String value = viewtag.substring(viewtag.length()-1, viewtag.length());
+                    presenter.setState(Integer.parseInt(value));
                     view.startDragAndDrop(data, shadowBuilder, view, 0);
 
                     return false;
@@ -97,7 +102,7 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return arraylist.size();
+        return day.size();
     }
 
 

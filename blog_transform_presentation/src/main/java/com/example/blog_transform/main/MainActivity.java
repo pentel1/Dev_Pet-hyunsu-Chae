@@ -1,5 +1,9 @@
 package com.example.blog_transform.main;
 
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
@@ -19,11 +23,11 @@ import com.example.blog_transform.Main_Contract;
 import com.example.blog_transform.R;
 import com.example.blog_transform.make.MakeActivity;
 import com.example.blog_transform.schedule_fragment.ScheduleFragment;
-import com.example.bolg_transform_data.Model.DataModel_example.RoomList;
-import com.example.bolg_transform_data.Model.DataSource.Remote_Schedule;
+import com.example.blog_transform_domain.Main_Domain.Schedule_Save_UseCase;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements Main_Contract.Main_View {
@@ -32,10 +36,14 @@ public class MainActivity extends AppCompatActivity implements Main_Contract.Mai
 
     RecyclerView room_list;
     RoomListAdapter room_adapter;
-    ArrayList<RoomList> room;
+    List<String> room;
 
     private FragmentManager fragmentManager;
     private FragmentTransaction transaction;
+
+
+
+
 
 
     @Override
@@ -43,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements Main_Contract.Mai
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         presenter = new Main_Presenter(this);
+
+
 
         init();
 
@@ -56,14 +66,13 @@ public class MainActivity extends AppCompatActivity implements Main_Contract.Mai
         room_list = (RecyclerView) findViewById(R.id.room_list);
 
 
-        //room = presenter.getRoomList_Data();
-        room = new ArrayList<RoomList>();
-        room.add(new RoomList("방 이름"));
-        room.add(new RoomList("스마일게이트 윈터 데브 캠프 팀 dev_pet"));
-        room.add(new RoomList("테스트용으로 진짜 긴 방 제목이 필요해요 띄어쓰기도없이넘겨볼게요."));
-        room.add(new RoomList("테스트용으로 진짜 긴 방 제목이 필요해요 띄어쓰기도없이넘겨볼게요."));
-        room.add(new RoomList("테스트용으로 진짜 긴 방 제목이 필요해요 띄어쓰기도없이넘겨볼게요."));
-        room.add(new RoomList("+"));
+
+
+        room = new ArrayList<String>();
+        room.add("테스트 용 더미 방");
+        room.add("+");
+
+
 
         show_View();
 
@@ -96,7 +105,11 @@ public class MainActivity extends AppCompatActivity implements Main_Contract.Mai
 
 
                 Intent intent = new Intent(getApplicationContext(), MakeActivity.class);
-                startActivity(intent);
+
+                mStartForResult.launch(intent);
+
+
+
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -113,7 +126,18 @@ public class MainActivity extends AppCompatActivity implements Main_Contract.Mai
         room_adapter = new RoomListAdapter(room);
         room_list.setAdapter(room_adapter);
         room_list.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+    }
 
+
+    public void show_View(List<String> timelist) {
+        ScheduleFragment scheduleFragment = new ScheduleFragment(timelist);
+        fragmentManager = getSupportFragmentManager();
+        transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.main_shedule, scheduleFragment).commitAllowingStateLoss();
+
+        room_adapter = new RoomListAdapter(room);
+        room_list.setAdapter(room_adapter);
+        room_list.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
     }
 
     @Override
@@ -126,6 +150,29 @@ public class MainActivity extends AppCompatActivity implements Main_Contract.Mai
     public void update_Fragment() {
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RESULT_OK) {
+
+        }
+    }
+
+    ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                //result.getResultCode()를 통하여 결과값 확인
+                if(result.getResultCode() == RESULT_OK) {
+                    Schedule_Save_UseCase usecase = new Schedule_Save_UseCase();
+                    List<String> timelist = usecase.getTimelist();
+
+                    show_View(timelist);
+                }
+            }
+    );
+
 
 
 }

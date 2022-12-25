@@ -28,10 +28,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.blog_transform.R;
 
 import com.example.blog_transform.schedule_fragment.ScheduleFragment;
-import com.example.bolg_transform_data.Model.DataModel_example.TeamList;
-import com.example.bolg_transform_data.Model.DataModel_example.TeamRoom;
+
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class TeamRoomActivity extends AppCompatActivity {
@@ -107,9 +107,9 @@ public class TeamRoomActivity extends AppCompatActivity {
 
 
         RecyclerView listview;
-        ArrayList<TeamList> increase_list = new ArrayList<TeamList>();
+        List<String> increase_list = new ArrayList<String>();
 
-        increase_list.add(new TeamList("증가되는 테스트 텍스트"));
+        increase_list.add("팀원 리스트");
 
         TeamListAdapter adapter = new TeamListAdapter(increase_list);
 
@@ -126,24 +126,11 @@ public class TeamRoomActivity extends AppCompatActivity {
 
                 if(state==0) {
 
-                    ArrayList<TeamRoom> increase_list = new ArrayList<TeamRoom>();
+                    List<String> increase_list = new ArrayList<String>();
 
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트aaaaaaaaaaa"));
-                    increase_list.add(new TeamRoom("증가되는"));
-                    increase_list.add(new TeamRoom("증"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
-                    increase_list.add(new TeamRoom("증가되는 테스트 텍스트ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"));
+                    increase_list.add("테스트용 더미 텍스트");
+                    increase_list.add("짧은 텍스트");
+                    increase_list.add("긴 텍스트                                     ");
                     teamRoomAdapter = new TeamRoomAdapter(increase_list);
                     chat_list.setAdapter(teamRoomAdapter);
 

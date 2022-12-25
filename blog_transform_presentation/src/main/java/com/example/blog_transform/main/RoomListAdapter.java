@@ -17,23 +17,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blog_transform.R;
 import com.example.blog_transform.teamroom.TeamRoomActivity;
-import com.example.bolg_transform_data.Model.DataModel_example.RoomList;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.ViewHolder>{
 
-    private ArrayList<RoomList> arraylist;
+    private List<String> arraylist;
     private Context context;
+    private Main_Presenter presenter;
 
-    public RoomListAdapter(ArrayList<RoomList> arrayList) {
+    public RoomListAdapter(List<String> arrayList) {
         this.arraylist = arrayList;
+
     }
 
     @NonNull
     @Override
     public RoomListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
+        presenter = new Main_Presenter(context);
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.recycler_main_item_room, parent, false);
@@ -44,44 +46,25 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull RoomListAdapter.ViewHolder holder, int position) {
-        if(arraylist.get(position).getText().equals("+"))
+        if(arraylist.get(position).equals("+"))
         {
-            holder.name.setText(arraylist.get(position).getText());
+            holder.name.setText(arraylist.get(position));
             holder.name.setTextSize(Dimension.SP,50);
             holder.name.setTextColor(Color.parseColor("#FFBE00"));
             holder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
-
-                    Dialog make_room = new Dialog(context);       // Dialog 초기화
-                    make_room.requestWindowFeature(Window.FEATURE_NO_TITLE); // 타이틀 제거
-                    make_room.setContentView(R.layout.dialog_make_room);
-                    EditText editText = make_room.findViewById(R.id.dialog_make_room_name);
-                    Button button = make_room.findViewById(R.id.dialog_make_room_button);
-                    button.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Intent intent = new Intent(context, TeamRoomActivity.class);
-                            intent.putExtra("Roomname_key",editText.getText().toString());
-                            context.startActivity(intent);
-                            make_room.cancel();
-                        }
-                    });
-                    make_room.show();
-
+                    presenter.RoomList_Touch();
                 }
             });
         }
         else
         {
-            holder.name.setText(arraylist.get(position).getText());
+            holder.name.setText(arraylist.get(position));
             holder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(context, TeamRoomActivity.class);
-                    intent.putExtra("Roomname_key",holder.name.getText());
-                    context.startActivity(intent);
+                    presenter.Make_Room(holder.name.getText()+"");
                 }
             });
         }

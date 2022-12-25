@@ -18,23 +18,33 @@
             layout="@layout/activity_teamroom_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="8" />
+            android:layout_weight="7" />
 
         <LinearLayout
             android:id="@+id/first_message_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="7"
             android:orientation="horizontal"
+            android:background="@drawable/round_notice"
+            android:elevation="5dp"
             android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/notice" />
 
             <TextView
                 android:id="@+id/first_message"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/round_room"
                 android:ellipsize="end"
                 android:gravity="center|left"
                 android:maxLength="10"

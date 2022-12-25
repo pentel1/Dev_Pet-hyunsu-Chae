@@ -13,15 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blog_transform.R;
 
-import com.example.bolg_transform_data.Model.DataModel_example.TeamRoom;
-
-import java.util.ArrayList;
+import java.util.List;
 
 public class TeamRoomAdapter extends RecyclerView.Adapter<TeamRoomAdapter.ViewHolder> {
 
-    private ArrayList<TeamRoom> arraylist;
+    private List<String> arraylist;
     boolean flag = true;
-    public TeamRoomAdapter(ArrayList<TeamRoom> arrayList) {
+    public TeamRoomAdapter(List<String> arrayList) {
         this.arraylist = arrayList;
     }
 
@@ -39,7 +37,7 @@ public class TeamRoomAdapter extends RecyclerView.Adapter<TeamRoomAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull TeamRoomAdapter.ViewHolder holder, int position) {
-        holder.text.setText(arraylist.get(position).getText());
+        holder.text.setText(arraylist.get(position));
 
         if(flag)
         {

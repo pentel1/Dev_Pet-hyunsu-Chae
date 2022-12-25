@@ -10,14 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blog_transform.R;
-import com.example.bolg_transform_data.Model.DataModel_example.TeamList;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class TeamListAdapter extends RecyclerView.Adapter<TeamListAdapter.ViewHolder> {
 
-    private ArrayList<TeamList> arraylist;
-    public TeamListAdapter(ArrayList<TeamList> arrayList) {
+    private List<String> arraylist;
+    public TeamListAdapter(List<String> arrayList) {
         this.arraylist = arrayList;
     }
 
@@ -35,7 +34,7 @@ public class TeamListAdapter extends RecyclerView.Adapter<TeamListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull TeamListAdapter.ViewHolder holder, int position) {
-        holder.name.setText(arraylist.get(position).getName());
+        holder.name.setText(arraylist.get(position));
 
 
 

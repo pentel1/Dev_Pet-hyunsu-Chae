@@ -1,6 +1,7 @@
 package com.example.blog_transform.schedule_fragment;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,16 +11,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.blog_transform.R;
-import com.example.bolg_transform_data.Model.DataModel_example.Time;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.ViewHolder> {
 
-    private ArrayList<Time> arraylist;
+    private List<String> arraylist;
 
-    public TimeAdapter(ArrayList<Time> arrayList) {
+    public TimeAdapter(List<String> arrayList) {
         this.arraylist = arrayList;
+        if (this.arraylist == null) {
+            this.arraylist = new ArrayList<String>();
+        }
     }
 
     @NonNull
@@ -36,9 +40,16 @@ public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TimeAdapter.ViewHolder holder, int position) {
-        holder.starttime.setText(arraylist.get(position).getStarttime());
-        holder.swung.setText(arraylist.get(position).getSwung());
-        holder.endtime.setText(arraylist.get(position).getEndtime());
+
+
+            String temp = arraylist.get(position);
+            String temp_s[] = temp.split("/");
+            holder.starttime.setText(temp_s[0]);
+            holder.swung.setText("~");
+            holder.endtime.setText(temp_s[1]);
+
+
+
     }
 
     @Override
