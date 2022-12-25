@@ -20,9 +20,11 @@ public interface Repository {
         void addRoomList(String roomname);
     }
 
-    interface Chat
+    interface ChatList
     {
-
+        void WriteChat(String text);
+        void UpdateChat(List<String> textlist);
+        void remove(String text);
     }
 
 }

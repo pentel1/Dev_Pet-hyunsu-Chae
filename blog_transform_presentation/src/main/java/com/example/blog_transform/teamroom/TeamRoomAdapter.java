@@ -65,9 +65,6 @@ public class TeamRoomAdapter extends RecyclerView.Adapter<TeamRoomAdapter.ViewHo
             holder.text.setLayoutParams(params);
             flag = true;
         }
-        //ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT,ConstraintLayout.LayoutParams.WRAP_CONTENT);
-
-
 
 
     }
