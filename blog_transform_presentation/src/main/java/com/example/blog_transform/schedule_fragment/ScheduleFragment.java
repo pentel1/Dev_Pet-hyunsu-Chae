@@ -18,7 +18,7 @@ import com.example.blog_transform.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ScheduleFragment extends Fragment implements Main_Contract.Fragment_View {
+public class ScheduleFragment extends Fragment {
 
     RecyclerView schedule_day;
     ScheduleAdapter schedule_adapter;
@@ -76,14 +76,5 @@ public class ScheduleFragment extends Fragment implements Main_Contract.Fragment
 
     }
 
-    @Override
-    public void show_Fragment() {
-
-    }
-
-    @Override
-    public void update_TimeList() {
-
-    }
 
 }

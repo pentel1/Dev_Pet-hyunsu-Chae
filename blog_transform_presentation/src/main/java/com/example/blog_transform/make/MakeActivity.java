@@ -32,13 +32,10 @@ public class MakeActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
-
             schedule = new ArrayList<Integer>();
             presenter = new Make_Presenter(schedule);
-
             make_schedule = (RecyclerView) findViewById(R.id.make_schedule);
+
 
             ArrayList<String> list = new ArrayList<String>();
             ArrayList<Integer> image = new ArrayList<Integer>();

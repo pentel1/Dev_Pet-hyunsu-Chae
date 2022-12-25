@@ -25,11 +25,13 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
     private List<String> day_timelist = null;
     private TimeAdapter timeAdapter;
     private TimeAdapter mainAdapter;
+    private Fragment_Presenter presenter;
 
 
     public ScheduleAdapter(List<String> arrayList) {
         this.day = arrayList;
         this.timelist = new ArrayList<>();
+
     }
 
     public ScheduleAdapter(List<String> arrayList, List<String> timelist) {
@@ -41,6 +43,7 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
+        presenter = new Fragment_Presenter();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.recycler_main_item_day, parent, false);
@@ -54,48 +57,29 @@ public class ScheduleAdapter extends RecyclerView.Adapter<ScheduleAdapter.ViewHo
         holder.textView.setText(day.get(position));
 
         day_timelist = new ArrayList<String>();
+
+
+        day_timelist = presenter.Make_timelist(timelist, position);
+        List<String> maintime_list = presenter.Make_maintime_list(day_timelist);
+
+
         TimeAdapter t_adapter = new TimeAdapter(day_timelist);
-        TimeAdapter m_adapter = new TimeAdapter(day_timelist);
+        TimeAdapter m_adapter = new TimeAdapter(maintime_list);;
 
-        List<String> maintime = new ArrayList<String>();
-
-
-        for(int i = 0; i < timelist.size(); i++)
-        {
-            if((timelist.get(i).charAt(0) + "").equals(position + ""))
-            {
-                String temp = timelist.get(i);
-                day_timelist.add(temp.substring(1, temp.length()));
-            }
-        }
-
-        if(day_timelist.size() > 0)
-        {
-            t_adapter = new TimeAdapter(day_timelist);
-            String temp_s1[] = day_timelist.get(0).split("/");
-            String start_time = temp_s1[0];
-            String temp_s2[] = day_timelist.get(day_timelist.size() - 1).split("/");
-            String end_time = temp_s2[1];
-            maintime.add(start_time + "/" + end_time);
-            m_adapter = new TimeAdapter(maintime);
-            holder.time.setAdapter(m_adapter);
-        }
-
-        TimeAdapter finalT_adapter = t_adapter;
-        TimeAdapter finalM_adapter = m_adapter;
+        holder.time.setAdapter(m_adapter);
 
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 if (holder.state == 0) {
-                    holder.time.setAdapter(finalT_adapter);
+                    holder.time.setAdapter(t_adapter);
                     Animation animation = AnimationUtils.loadAnimation(view.getContext(), R.anim.anime_visible);
                     holder.time.startAnimation(animation);
                     holder.state = 1;
 
                 } else if (holder.state == 1) {
-                    holder.time.setAdapter(finalM_adapter);
+                    holder.time.setAdapter(m_adapter);
                     Animation animation = AnimationUtils.loadAnimation(view.getContext(), R.anim.anime_visible);
                     holder.time.startAnimation(animation);
                     holder.state = 0;

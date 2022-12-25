@@ -65,7 +65,7 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
                 @Override
                 public void onClick(View view) {
 
-                    presenter.imagechange(view, view.getTag() + "");
+                    presenter.Touch_imagechange(view, view.getTag() + "");
                 }
             });
 
@@ -84,9 +84,9 @@ public class MakeAdapter extends RecyclerView.Adapter<MakeAdapter.ViewHolder> {
                             view);
 
 
-                    presenter.imagechange(view, view.getTag()+"");
-                    String viewtag = view.getTag()+"";
+                    presenter.Touch_imagechange(view, view.getTag()+"");
 
+                    String viewtag = view.getTag()+"";
                     String value = viewtag.substring(viewtag.length()-1, viewtag.length());
                     presenter.setState(Integer.parseInt(value));
                     view.startDragAndDrop(data, shadowBuilder, view, 0);

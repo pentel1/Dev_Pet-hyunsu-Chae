@@ -9,8 +9,6 @@ import com.example.bolg_transform_data.Model.DataModel.Schedule_Entity;
 import com.example.bolg_transform_data.Model.DataModel.TeamChat_Entity;
 import com.example.bolg_transform_data.Model.DataModel.TeamList_Entity;
 import com.example.bolg_transform_data.Model.DataModel.TeamRoom_Entity;
-import com.example.bolg_transform_data.Model.DataModel_example.TeamRoom;
-
 
 public class Mapper {
 

@@ -28,6 +28,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.blog_transform.R;
 
 import com.example.blog_transform.schedule_fragment.ScheduleFragment;
+import com.example.blog_transform_domain.Main_Domain.Schedule_Make_UseCase;
+import com.example.blog_transform_domain.Main_Domain.Schedule_Save_UseCase;
 
 
 import java.util.ArrayList;
@@ -75,8 +77,19 @@ public class TeamRoomActivity extends AppCompatActivity {
 
         state = 0;
 
+        Schedule_Save_UseCase save_useCase = new Schedule_Save_UseCase();
 
-        scheduleFragment = new ScheduleFragment();
+
+        if(save_useCase.getSchedule_data() != null)
+        {
+            Schedule_Make_UseCase make_useCase = new Schedule_Make_UseCase(save_useCase.getSchedule_data(), save_useCase.getDescription_data());
+            scheduleFragment = new ScheduleFragment(make_useCase.getTimeList());
+        }
+        else
+        {
+            scheduleFragment = new ScheduleFragment();
+        }
+
         fragmentManager = getSupportFragmentManager();
         transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.teamroom_schedule, scheduleFragment).commitAllowingStateLoss();
@@ -96,11 +109,8 @@ public class TeamRoomActivity extends AppCompatActivity {
         int widthPixels = metrics.widthPixels;
         int heightPixels = metrics.heightPixels / 11 * 10;
 
-
         params_open = new LinearLayout.LayoutParams(widthPixels, heightPixels);
         params_close = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-
-
 
         chat_list.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, true));
 

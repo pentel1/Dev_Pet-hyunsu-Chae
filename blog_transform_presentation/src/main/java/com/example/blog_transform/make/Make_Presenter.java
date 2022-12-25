@@ -25,7 +25,7 @@ public class Make_Presenter implements Main_Contract.Make_Presenter {
 
 
     @Override
-    public void imagechange(View v, String viewtag) {
+    public void Touch_imagechange(View v, String viewtag) {
         ImageView ig = (ImageView) v;
         String value = viewtag.substring(viewtag.length()-1, viewtag.length());
         int index = Integer.parseInt(viewtag.substring(0, viewtag.length()-1));
@@ -109,7 +109,7 @@ public class Make_Presenter implements Main_Contract.Make_Presenter {
             description.add("초기값");
         }
         usecase = new Schedule_Save_UseCase(schedule, description, "pentel");
-        usecase.getSchedule();
+
 
     }
 

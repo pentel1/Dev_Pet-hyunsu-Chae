@@ -12,32 +12,25 @@ public interface  Main_Contract {
     interface Main_View {
         void show_View();
         void update_RoomList();
-        void update_Fragment();
+        void update_Schedule();
     }
     interface Main_Presenter {
-        void RoomList_Touch();
-        void Make_Room(String roomname);
+        void RoomList_Touch(String roomname);
+        void Make_Room();
     }
 
     interface Make_Presenter
     {
-        void imagechange(View v, String viewtag);
+        void Touch_imagechange(View v, String viewtag);
         void Drag_imagechange(View v, String viewtag);
 
     }
 
-
-
-    interface Fragment_View {
-        void show_Fragment();
-        void update_TimeList();
-    }
     interface Fragment_Presenter
     {
-
-        void Day_Touch();
         void Time_Touch();
-        TimeAdapter Change_Adapter(int state, TimeAdapter time);
+        List<String> Make_maintime_list(List<String> day_timelist);
+        List<String> Make_timelist(List<String> timelist, int position);
     }
     interface Fragment_ScheduleAdapter_Presenter
     {

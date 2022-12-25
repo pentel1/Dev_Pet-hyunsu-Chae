@@ -54,7 +54,8 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.ViewHo
             holder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    presenter.RoomList_Touch();
+                    presenter.Make_Room();
+
                 }
             });
         }
@@ -64,7 +65,7 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.ViewHo
             holder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    presenter.Make_Room(holder.name.getText()+"");
+                    presenter.RoomList_Touch(holder.name.getText()+"");
                 }
             });
         }
